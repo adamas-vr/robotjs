@@ -115,7 +115,7 @@ static HRESULT createShadersAndSampler(void)
 		"	float2 pos[3] = { float2(-1.0, -1.0), float2(-1.0, 3.0), float2(3.0, -1.0) };"
 		"	VSOut output;"
 		"	output.pos = float4(pos[id], 0.0, 1.0);"
-		"	output.uv = float2((pos[id].x + 1.0) * 0.5, (1.0 - pos[id].y) * 0.5);"
+		"	output.uv = float2((pos[id].x + 1.0) * 0.5, (pos[id].y + 1.0) * 0.5);"
 		"	return output;"
 		"}";
 	static const char *pixelShaderSource =
